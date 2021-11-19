@@ -4,11 +4,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 1rem;
+        margin-top: 100px;
     }
 }
 
 @media (min-width: 960px) {
     .post-container {
         grid-gap: 2rem;
+        margin-top: 200px;
     }
 }

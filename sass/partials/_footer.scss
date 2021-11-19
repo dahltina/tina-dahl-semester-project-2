@@ -1,0 +1,34 @@
+footer {
+
+    a {
+        color: inherit !important;
+        text-decoration: 1px underline $info;
+        transition: 0.1s ease-in;
+    }
+
+    a:hover,
+    a:focus {
+        background-color: $info;
+    }
+
+    h3 {
+        margin-bottom: 25px;
+    }
+
+    .form-label {
+        width: 60%;
+        margin-bottom: 0;
+    }
+
+    .btn-outline-primary {
+        margin-left: 1rem;
+        font-size: 1rem;
+        max-height: 40px;
+        align-self: flex-end;
+    }
+
+    .form-error {
+        color: $warning;
+        display: none;
+    }
+}

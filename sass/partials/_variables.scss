@@ -17,6 +17,10 @@ $h1-font-size: $font-size-base * 5;
 // colors
 $primary: #FC6D69;
 $secondary: #FE9665;
+$success: #38AB8D;
+$info: #72E3C6;
+$warning: $secondary;
+$danger: $primary;
 $color-text-dark: #000;
 $color-text: #767676;
 $color-white: #fff;
@@ -35,15 +39,22 @@ $input-btn-font-size: 1.5rem;
 
 // form elements
 $input-border-color: $color-text-dark;
+$input-bg: transparent;
 $input-color: $color-text-dark;
 $input-border-radius: 0;
+$input-font-family: $font-family-sans-serif;
+$input-font-size: 1rem;
 
 // navbar
 $navbar-padding-y: 1rem;
-$navbar-light-color: #000;
+$navbar-light-color: $color-text-dark;
 $navbar-light-active-color: $primary;
 $nav-link-hover-color: $primary !important;
 
 // cards
 $card-border-width: 0;
 $card-bg: $background-color;
+
+// loader
+$spinner-width: 4rem;
+$spinner-vertical-align: 0;
