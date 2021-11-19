@@ -1,0 +1,14 @@
+
+@media (min-width: 720px) {
+    .post-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+}
+
+@media (min-width: 960px) {
+    .post-container {
+        grid-gap: 2rem;
+    }
+}

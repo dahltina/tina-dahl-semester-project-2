@@ -1,0 +1,53 @@
+@import "partials/variables";
+@import "partials/typography";
+@import "partials/navbar";
+@import "partials/costum";
+@import "partials/home/cards";
+@import "partials/home/hero";
+@import "partials/home/posts";
+
+
+// bootstrap
+@import "../bootstrap-sass/functions";
+@import "../bootstrap-sass/variables";
+@import "../bootstrap-sass/mixins";
+@import "../bootstrap-sass/utilities";
+
+@import "../bootstrap-sass/root";
+@import "../bootstrap-sass/reboot";
+@import "../bootstrap-sass/type";
+@import "../bootstrap-sass/images";
+@import "../bootstrap-sass/containers";
+@import "../bootstrap-sass/grid";
+@import "../bootstrap-sass/tables";
+@import "../bootstrap-sass/forms";
+@import "../bootstrap-sass/buttons";
+@import "../bootstrap-sass/transitions";
+@import "../bootstrap-sass/dropdown";
+@import "../bootstrap-sass/button-group";
+@import "../bootstrap-sass/nav";
+@import "../bootstrap-sass/navbar";
+@import "../bootstrap-sass/card";
+@import "../bootstrap-sass/accordion";
+@import "../bootstrap-sass/breadcrumb";
+@import "../bootstrap-sass/pagination";
+@import "../bootstrap-sass/badge";
+@import "../bootstrap-sass/alert";
+@import "../bootstrap-sass/progress";
+@import "../bootstrap-sass/list-group";
+@import "../bootstrap-sass/close";
+@import "../bootstrap-sass/toasts";
+@import "../bootstrap-sass/modal";
+@import "../bootstrap-sass/tooltip";
+@import "../bootstrap-sass/popover";
+@import "../bootstrap-sass/carousel";
+@import "../bootstrap-sass/spinners";
+@import "../bootstrap-sass/offcanvas";
+@import "../bootstrap-sass/placeholders";
+
+// Helpers
+@import "../bootstrap-sass/helpers";
+
+// Utilities
+@import "../bootstrap-sass/utilities/api";
+// scss-docs-end import-stack
