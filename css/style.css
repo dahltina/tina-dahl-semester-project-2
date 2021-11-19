@@ -52,6 +52,10 @@ img {
   width: 100%;
 }
 
+footer > {
+  font-family: "urw-form";
+}
+
 .featured-products-container {
   display: -ms-grid;
   display: grid;
@@ -119,7 +123,7 @@ img {
 .hero-container {
   position: relative;
   z-index: 1;
-  margin-bottom: 270px;
+  height: 100vh;
 }
 
 .hero-content {
@@ -144,17 +148,8 @@ img {
 }
 
 @media (min-width: 720px) {
-  .hero-container {
-    margin-bottom: 100px;
-  }
   .hero-content .btn {
     margin: 50px 0;
-  }
-}
-
-@media (min-width: 960px) {
-  .hero-container {
-    margin-bottom: 0;
   }
 }
 
