@@ -63,8 +63,9 @@ img {
 
 footer a {
   color: inherit !important;
-  -webkit-text-decoration: 1px underline #72E3C6;
-          text-decoration: 1px underline #72E3C6;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #72E3C6;
+          text-decoration-color: #72E3C6;
   -webkit-transition: 0.1s ease-in;
   transition: 0.1s ease-in;
 }
@@ -137,7 +138,7 @@ footer .form-error {
 .price {
   border: 2px solid #FE9665;
   border-radius: 1rem;
-  padding: .25rem;
+  padding: .25rem 0;
   width: 100px;
   margin: 0 auto;
   font-family: "kepler-std-extended-display";

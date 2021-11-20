@@ -2,7 +2,8 @@ footer {
 
     a {
         color: inherit !important;
-        text-decoration: 1px underline $info;
+        text-decoration: underline;
+        text-decoration-color: $info;
         transition: 0.1s ease-in;
     }
 
