@@ -15,6 +15,11 @@ header {
         background-color: $color-text-dark;
         color: $color-white;
     }
+
+    .fa-heart {
+        font-size: 30px;
+        color: $color-text-dark;
+    }
 }
 
 .navbar-nav {
@@ -29,9 +34,4 @@ header {
     .form-control {
         max-width: 200px;
     }
-}
-
-.fa-heart {
-    font-size: 30px;
-    color: $color-text-dark;
 }

@@ -23,6 +23,18 @@
     border-bottom-right-radius: 1rem;
 }
 
+.card {
+
+    position: relative;
+
+    .fa-heart {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 26px;
+    }
+}
+
 .card-body {
     text-align: center;
 

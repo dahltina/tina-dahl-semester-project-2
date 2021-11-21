@@ -1,5 +1,5 @@
 import { baseUrl } from "./constants/api.js";
-import { createProducts } from "./ui/createProducts.js";
+import { createCards } from "./ui/createCards.js";
 import { createArticles } from "./ui/createArticles.js";
 
 const productsUrl = baseUrl + "products";
@@ -7,11 +7,12 @@ const productsUrl = baseUrl + "products";
 const container = ".featured-products-container";
 
 async function getProducts() {
+
     try {
         const response = await fetch(productsUrl);
         const json = await response.json();
         const products = json;
-        createProducts(products, container);
+        createCards(products, container);
 
     }
     catch (error) {
