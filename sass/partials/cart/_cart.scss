@@ -1,0 +1,37 @@
+.cart-main {
+    max-width: 1250px !important;
+    margin: 0 auto;
+}
+
+.cart-container {
+
+    .product-thumb {
+        max-width: 78px;
+    }
+
+    .product-count-container p {
+        margin: 0;
+    }
+
+    .fa-plus,
+    .fa-minus {
+        padding: 0 5px;
+        cursor: pointer;
+    }
+
+    .product-link {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .product-link:hover {
+        text-decoration: underline;
+        text-decoration-color: $info;
+    }
+}
+
+#total-price {
+    font-size: 20px;
+    font-weight: bold;
+}
+

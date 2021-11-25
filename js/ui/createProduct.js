@@ -1,4 +1,5 @@
 import { baseUrl } from "../constants/api.js";
+import { addToCart } from "../utils/cartFunctions.js";
 
 const productContainer = document.querySelector(".product-container");
 const querystring = document.location.search;
@@ -19,19 +20,24 @@ async function createProduct() {
     try {
         const response = await fetch(url);
         const product = await response.json();
-        console.log(product);
 
         productContainer.innerHTML = "";
 
         productContainer.innerHTML += ` <div class="product d-flex">
-                                            <div class="product-info">
+                                            <div class="product-info mx-5">
                                                 <h1>${product.title}</h1>
                                                 <p>${product.description}</p>
                                                 <p>${product.price}</p>
-                                                <button class="btn btn-outline-primary add-to-cart-btn">Add to cart</button>
+                                                <button data-id="${product.id}"
+                                                    data-name="${product.title}"
+                                                    data-price="${product.price}"
+                                                    data-image="${product.image.formats.thumbnail.url}"
+                                                    class="btn btn-outline-primary add-to-cart-btn">
+                                                        Add to cart
+                                                </button>
                                             </div>
                                             <div class="product-image">
-                                                <img src="${product.image.url}" class="" alt="${product.image.alternativeText}">
+                                                <img src="${product.image.url}" class="product-image" alt="${product.image.alternativeText}">
                                             </div>
                                         </div>`;
 
@@ -45,11 +51,11 @@ async function createProduct() {
     }
 }
 
-createProduct()
+// Add to cart
+createProduct().then(() => {
+    const addToCartBtn = document.querySelectorAll(".add-to-cart-btn");
 
-// THEN
-
-// const addToCartBtn = document.querySelector(".add-to-cart-btn");
-
-// addToCartBtn.addEventListener("click");
-// console.log("click");
+    addToCartBtn.forEach((button) => {
+      button.addEventListener("click", addToCart)
+    });
+})
