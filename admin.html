@@ -15,7 +15,7 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-md navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-xl">
               <a class="navbar-brand" href="index.html">
                   <img src="images/logo.png" width="200px" class="logo">
@@ -50,6 +50,7 @@
                   <div class="nav-item">
                     <a class="nav-link" href="favourites.html"><i class="far fa-heart"></i></a>
                   </div>
+                  <div class="nav-item login login-menu"></div>
               </div>
             </div>
           </nav>
@@ -57,10 +58,38 @@
 
     <main>
 
-        <div class="container-xl mt-5">
+      <div class="container-xl admin-menu"></div>
 
-        </div>
+      <div class="container-xl mt-5" id="edit-products-container">
+        <form id="edit-products-form">
+            <h1>Add / edit products</h1>
+            <div class="mb-3 mt-5">
+              <label for="title" class="form-label"> Product title</label>
+              <input type="text" class="form-control" id="title">
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label">Product price</label>
+              <input type="text" class="form-control" id="price">
+            </div>
+            <div class="input-group mb-3">
+              <input type="file" class="form-control" id="inputGroupFile02">
+              <label class="input-group-text" for="inputGroupFile02">Upload image</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Featured</label>
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px"></textarea>
+              <label for="floatingTextarea2">Product description</label>
+            </div>
 
+            <button type="submit" class="btn btn-outline-primary mt-4">Add / update product</button>
+            <div class="message-container"></div>
+        </form>
+    </div>
+
+    </main>
 
     <div class="line mt-5"></div>
 
@@ -101,7 +130,9 @@
         </div>
     </footer>
 
-    <script src="js/index.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/admin/adminFunctions.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

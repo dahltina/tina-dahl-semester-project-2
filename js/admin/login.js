@@ -1,8 +1,13 @@
-import displayMessage from "../components/displayMessage.js"
+import displayMessage from "../components/displayMessage.js";
+import { saveToken, saveUser } from "../utils/userFunctions.js";
+import { createMenu } from "../ui/createMenu.js";
 
 const form = document.querySelector("#login-form");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
+const url = "https://ancient-wildwood-54765.herokuapp.com/admin/login";
+
+createMenu();
 
 form.addEventListener("submit", validateForm);
 
@@ -12,9 +17,42 @@ function validateForm(event) {
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
 
-    if ( emailValue === 0 || passwordValue === 0 ) {
+    if (emailValue.length === 0 || passwordValue.length === 0) {
         return displayMessage("error", "Email and / or password invalid or don't match", ".message-container");
     }
 
+    login(emailValue, passwordValue);
+}
+
+async function login(email, password) {
+
+    const data = JSON.stringify({ "email": email, "password": password });
+
+    const options = {
+        method: "POST",
+        body: data,
+        headers: {
+            "Content-Type": "application/json"
+        }
+    };
+
+    try {
+        const response = await fetch(url, options);
+        const json = await response.json();
+        console.log(json);
+
+        if (json.data.user) {
+            saveToken(json.data.token);
+            saveUser(json.data.user);
+            location.href = "admin.html";
+        }
+
+        if (json.error) {
+            displayMessage("error", "Email and/or password is invalid and/or don't match", ".message-container");
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
 
 }

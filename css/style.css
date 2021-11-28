@@ -42,8 +42,12 @@ header {
   margin-left: auto;
 }
 
-.navbar-collapse .cart-link {
+.navbar-collapse.show .cart-link {
   margin-top: 20px;
+}
+
+.navbar-collapse .nav-item.login a {
+  padding-left: 0;
 }
 
 .logo {

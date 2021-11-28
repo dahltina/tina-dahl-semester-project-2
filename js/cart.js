@@ -1,8 +1,11 @@
 import { getExistingCart } from "./utils/cartFunctions.js";
+import { createMenu } from "./ui/createMenu.js";
 
 const cartItems = getExistingCart();
 const container = document.querySelector(".cart-container");
 const continueBtn = document.querySelector("#cart-button");
+
+createMenu();
 
 if (cartItems.length === 0) {
     container.innerHTML = `Nothing here yet.`;

@@ -1,16 +1,19 @@
 import { baseUrl } from "../constants/api.js";
 import { addToCart } from "../utils/cartFunctions.js";
+import { createMenu } from "./createMenu.js";
 
 const productContainer = document.querySelector(".product-container");
 const querystring = document.location.search;
 const params = new URLSearchParams(querystring);
 const id = params.get("id");
-// const breadcrumb1 = document.querySelector(".breadcrumb1");
 const breadcrumbActive = document.querySelector(".breadcrumb-active");
 const pageTitle = document.querySelector("title");
-const prevPage = document.referrer;
 
-console.log(prevPage);
+// const breadcrumb1 = document.querySelector(".breadcrumb1");
+// const prevPage = document.referrer;
+// console.log(prevPage);
+
+createMenu();
 
 
 const url = baseUrl + "products/" + id;
