@@ -2,6 +2,13 @@ import { getExistingCart } from "./utils/cartFunctions.js";
 
 const cartItems = getExistingCart();
 const container = document.querySelector(".cart-container");
+const continueBtn = document.querySelector("#cart-button");
+
+if (cartItems.length === 0) {
+    container.innerHTML = `Nothing here yet.`;
+    productPrice.innerHTML = "";
+    continueBtn.style.display = "none";
+  }
 
 cartItems.forEach(product => {
     container.innerHTML += `<div class="container product">
@@ -14,11 +21,11 @@ cartItems.forEach(product => {
                                     </div>
                                     <div class="col-2 d-flex align-items-center justify-content-evenly product-count-container">
                                         <i class="fas fa-plus"></i>
-                                        <p>${product.count}</p>
+                                        <p class="product-quantity">${product.count}</p>
                                         <i class="fas fa-minus"></i>
                                     </div>
                                     <div class="col-2 d-flex align-items-center justify-content-end">
-                                        <p class="product-price">${product.price}</p>
+                                        <p>$<span class="product-price">${product.price}</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -29,6 +36,10 @@ function updateCartTotal() {
     const total = [];
     const productPrice = document.querySelectorAll(".product-price");
 
+    // const quantity = document.querySelectorAll(".product-quantity");
+    // const pricePerProduct = productPrice * quantity;
+    // console.log(quantity);
+
     productPrice.forEach(function(item) {
         total.push(parseFloat(item.textContent))
     })
@@ -38,18 +49,30 @@ function updateCartTotal() {
         return total;
     }, 0)
 
-
     const totalPrice = price.toFixed(2);
 
     document.querySelector("#total-price").textContent += totalPrice;
 
-    // display number of items in cart badge
+    // display number of items in cart button badge
     let countItems = total.length;
     const cartCount = document.querySelector("#cart-count");
     cartCount.innerHTML = countItems;
     return cartCount;
 };
 
-updateCartTotal()
+updateCartTotal();
+
+// remove items from cart
+
+
+// .then(() => {
+//     const removeBtn = document.querySelectorAll("i .fa-minus");
+//     const addBtn = document.querySelectorAll("i .fa-plus");
+
+//     removeBtn.forEach((button) => {
+//       button.addEventListener("click", deleteItem)
+//     });
+// })
 
 // JSON.parse(localStorage.keyname).length
+

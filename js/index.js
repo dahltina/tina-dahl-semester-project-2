@@ -3,7 +3,6 @@ import { createCards } from "./ui/createCards.js";
 import { createArticles } from "./ui/createArticles.js";
 
 const productsUrl = baseUrl + "products";
-
 const container = ".featured-products-container";
 
 async function getProducts() {

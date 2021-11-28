@@ -25,10 +25,9 @@ export function addToCart() {
         saveToCart(currentCart);
     }
     else {
-        product.count ++;
+        productExists.count ++;
+        saveToCart(currentCart);
     }
-
-    console.log("product exists", productExists);
 }
 
 export function getExistingCart() {
@@ -48,9 +47,12 @@ function saveToCart(cartItems) {
     alert("Added to cart");
 }
 
-export function deleteItem() {
-    localStorage.removeItem();
-}
+
+
+
+
+
+
 
 // export const addToCart = (id, userIsLoggedIn) => {
 //     let cart = [];
