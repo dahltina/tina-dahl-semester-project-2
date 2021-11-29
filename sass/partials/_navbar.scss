@@ -2,6 +2,14 @@ header {
     background-color: $background-color;
 }
 
+.logo {
+    max-width: 180px;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
 .navbar {
     border-bottom: 1px solid #000;
 
@@ -31,20 +39,12 @@ header {
     }
 }
 
-.navbar-nav {
-    margin-left: auto;
-}
-
 .navbar-collapse.show .cart-link {
     margin-top: 20px;
 }
 
 .navbar-collapse .nav-item.login a {
     padding-left: 0;
-}
-
-.logo {
-    max-width: 180px;
 }
 
 #search-form {

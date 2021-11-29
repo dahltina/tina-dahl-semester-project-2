@@ -9,15 +9,17 @@ export function createMenu() {
     let menu = `<a href="login.html">Login</a>`;
 
     if (username) {
-        menu = `<div class="btn-group">
-                    <button type="button" class="btn btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        menu = `<div class="dropdown">
+                    <button class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Hi ${username}
                     </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="admin.html">Edit products</a>
-                        <a class="dropdown-item" id="logout" href="#">Log out</a>
-                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item small" href="admin.html">Edit products</a></li>
+                        <li><a class="dropdown-item small" id="logout" href="#">Log out</a></li>
+                    </ul>
                 </div>`;
+
+
     }
 
     container.innerHTML = `${menu}`;
