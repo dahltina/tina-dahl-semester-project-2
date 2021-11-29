@@ -47,7 +47,20 @@ function saveToCart(cartItems) {
     alert("Added to cart");
 }
 
+// remove items from cart
 
+
+// .then(() => {
+//     const removeBtn = document.querySelectorAll("i .fa-minus");
+//     const addBtn = document.querySelectorAll("i .fa-plus");
+
+//     removeBtn.forEach((button) => {
+//       button.addEventListener("click", deleteItem)
+//     });
+// })
+
+//     const newCart = currentCart.filter(item => item.id !== id);
+//     saveToCart(newCart);
 
 
 

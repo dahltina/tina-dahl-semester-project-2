@@ -15,6 +15,7 @@ async function getProducts() {
         const json = await response.json();
         const products = json;
         createCards(products, container);
+        console.log(products);
 
     }
     catch (error) {

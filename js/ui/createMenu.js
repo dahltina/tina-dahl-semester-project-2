@@ -5,6 +5,8 @@ export function createMenu() {
 
     const container = document.querySelector(".login-menu");
     const username = getUsername();
+    // const { pathname } = document.location;
+    // class="${pathname === "/admin.html" ? "active" : ""}"
 
     let menu = `<a href="login.html">Login</a>`;
 
@@ -14,7 +16,8 @@ export function createMenu() {
                         Hi ${username}
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item small" href="admin.html">Edit products</a></li>
+                        <li><a class="dropdown-item small" href="add-products.html">Add products</a></li>
+                        <li><a class="dropdown-item small" href="edit-products.html">Edit products</a></li>
                         <li><a class="dropdown-item small" id="logout" href="#">Log out</a></li>
                     </ul>
                 </div>`;

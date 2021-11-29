@@ -11,7 +11,7 @@ if (cartItems.length === 0) {
     container.innerHTML = `Nothing here yet.`;
     productPrice.innerHTML = "";
     continueBtn.style.display = "none";
-  }
+}
 
 cartItems.forEach(product => {
     container.innerHTML += `<div class="container product">
@@ -65,17 +65,7 @@ function updateCartTotal() {
 
 updateCartTotal();
 
-// remove items from cart
 
-
-// .then(() => {
-//     const removeBtn = document.querySelectorAll("i .fa-minus");
-//     const addBtn = document.querySelectorAll("i .fa-plus");
-
-//     removeBtn.forEach((button) => {
-//       button.addEventListener("click", deleteItem)
-//     });
-// })
 
 // JSON.parse(localStorage.keyname).length
 

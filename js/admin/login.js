@@ -1,11 +1,12 @@
 import displayMessage from "../components/displayMessage.js";
 import { saveToken, saveUser } from "../utils/userFunctions.js";
 import { createMenu } from "../ui/createMenu.js";
+import { baseUrl } from "../constants/api.js";
 
 const form = document.querySelector("#login-form");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
-const url = "https://ancient-wildwood-54765.herokuapp.com/admin/login";
+const url = baseUrl + "admin/login";
 
 createMenu();
 
@@ -44,7 +45,7 @@ async function login(email, password) {
         if (json.data.user) {
             saveToken(json.data.token);
             saveUser(json.data.user);
-            location.href = "admin.html";
+            location.href = "add-products.html";
         }
 
         if (json.error) {
