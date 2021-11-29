@@ -41,9 +41,16 @@ header {
   right: -7px;
   background-color: #FC6D69;
 }
+.navbar .cart-link:hover {
+  color: #fff !important;
+  opacity: 0.8;
+}
 .navbar .fa-heart {
-  font-size: 30px;
+  font-size: 20px;
   color: #000;
+}
+.navbar .fa-heart:hover {
+  color: #FC6D69;
 }
 
 .navbar-collapse.show .cart-link {
@@ -52,6 +59,10 @@ header {
 
 .navbar-collapse .nav-item.login a {
   padding-left: 0;
+}
+
+.dropdown .dropdown-menu.show li a {
+  text-transform: none;
 }
 
 #search-form .form-control {
@@ -3838,7 +3849,7 @@ textarea.form-control-lg {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #000;
-  border-radius: 5px;
+  border-radius: 0;
 }
 .dropdown-menu[data-bs-popper] {
   top: 100%;

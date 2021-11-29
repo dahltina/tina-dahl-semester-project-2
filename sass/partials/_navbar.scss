@@ -33,9 +33,18 @@ header {
         }
     }
 
+    .cart-link:hover {
+        color: $color-white !important;
+        opacity: 0.8;
+    }
+
     .fa-heart {
-        font-size: 30px;
+        font-size: 20px;
         color: $color-text-dark;
+    }
+
+    .fa-heart:hover {
+        color: $primary;
     }
 }
 
@@ -45,6 +54,12 @@ header {
 
 .navbar-collapse .nav-item.login a {
     padding-left: 0;
+}
+
+.dropdown {
+    .dropdown-menu.show li a{
+        text-transform: none;
+    }
 }
 
 #search-form {
