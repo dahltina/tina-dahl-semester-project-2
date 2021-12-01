@@ -13,6 +13,7 @@ const featured = document.querySelector("#featured");
 const description = document.querySelector("#product-description");
 const message = document.querySelector(".message-container");
 
+
 form.addEventListener("submit", submitForm);
 
 function submitForm(event) {
@@ -23,25 +24,24 @@ function submitForm(event) {
     const titleValue = title.value.trim();
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
-
-    console.log(titleValue);
-    console.log(priceValue);
-    console.log(descriptionValue);
+    const featuredValue = featured.checked;
 
     if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue < 20) {
         displayMessage("warning", "Please supply all values", ".message-container");
     }
-
-    addProduct(titleValue, priceValue, descriptionValue);
+    else {
+        addProduct(titleValue, priceValue, descriptionValue, featuredValue);
+    }
 }
 
-async function addProduct(title, price, description) {
+async function addProduct(title, price, description, featured) {
     const url = baseUrl + "products";
 
     const data = JSON.stringify({
         title: title,
         price: price,
-        description: description
+        description: description,
+        featured: featured
     });
 
     const token = getToken();

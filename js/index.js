@@ -2,11 +2,13 @@ import { baseUrl } from "./constants/api.js";
 import { createCards } from "./ui/createCards.js";
 import { createArticles } from "./ui/createArticles.js";
 import { createMenu } from "./ui/createMenu.js";
+import { countItemsInCart } from "./utils/cartFunctions.js";
 
 const productsUrl = baseUrl + "products";
 const container = ".featured-products-container";
 
 createMenu();
+countItemsInCart();
 
 async function getProducts() {
 

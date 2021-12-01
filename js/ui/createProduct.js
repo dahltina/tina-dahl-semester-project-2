@@ -1,6 +1,7 @@
 import { baseUrl } from "../constants/api.js";
 import { addToCart } from "../utils/cartFunctions.js";
 import { createMenu } from "./createMenu.js";
+import { countItemsInCart } from "../utils/cartFunctions.js";
 
 const productContainer = document.querySelector(".product-container");
 const querystring = document.location.search;
@@ -17,6 +18,7 @@ const url = baseUrl + "products/" + id;
 // <img class="rating" alt="product-rating" scr="../../images/rating.svg">
 
 createMenu();
+countItemsInCart();
 
 async function createProduct() {
 

@@ -1,11 +1,14 @@
 import { getExistingCart } from "./utils/cartFunctions.js";
 import { createMenu } from "./ui/createMenu.js";
+import { countItemsInCart } from "./utils/cartFunctions.js";
 
 const cartItems = getExistingCart();
 const container = document.querySelector(".cart-container");
 const continueBtn = document.querySelector("#cart-button");
 
 createMenu();
+countItemsInCart();
+
 
 if (cartItems.length === 0) {
     container.innerHTML = `Nothing here yet.`;
@@ -56,11 +59,6 @@ function updateCartTotal() {
 
     document.querySelector("#total-price").textContent += totalPrice;
 
-    // display number of items in cart button badge
-    let countItems = total.length;
-    const cartCount = document.querySelector("#cart-count");
-    cartCount.innerHTML = countItems;
-    return cartCount;
 };
 
 updateCartTotal();

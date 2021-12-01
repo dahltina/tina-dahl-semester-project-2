@@ -42,10 +42,26 @@ export function getExistingCart() {
     }
 }
 
+const cartCount = document.querySelector("#cart-count");
+
 function saveToCart(cartItems) {
     localStorage.setItem("cart", JSON.stringify(cartItems));
+    countItemsInCart();
+    cartCount.style.display = "block";
     alert("Added to cart");
 }
+
+// display number of items in cart button badge
+export function countItemsInCart() {
+
+    let countItems = getExistingCart().length;
+    cartCount.innerHTML = countItems;
+
+    if (!countItems) {
+        cartCount.style.display = "none";
+    }
+}
+
 
 // remove items from cart
 

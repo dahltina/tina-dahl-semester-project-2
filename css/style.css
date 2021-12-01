@@ -52,13 +52,20 @@ header {
 .navbar .fa-heart:hover {
   color: #FC6D69;
 }
+.navbar .login-menu {
+  padding-left: 10px;
+}
+.navbar .login-menu a {
+  text-decoration: none;
+}
 
 .navbar-collapse.show .cart-link {
   margin-top: 20px;
 }
 
-.navbar-collapse .nav-item.login a {
-  padding-left: 0;
+.navbar-collapse.show .login-menu {
+  padding-left: 5px;
+  padding-top: 10px;
 }
 
 .dropdown .dropdown-menu.show li a {
