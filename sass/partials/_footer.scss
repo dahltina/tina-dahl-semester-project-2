@@ -2,9 +2,9 @@ footer {
 
     a {
         color: inherit !important;
-        text-decoration: underline;
-        text-decoration-color: $info;
+        text-decoration: none;
         transition: 0.1s ease-in;
+        border-bottom: 2px solid $info;
     }
 
     a:hover,

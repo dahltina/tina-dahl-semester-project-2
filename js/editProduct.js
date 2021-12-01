@@ -13,6 +13,21 @@ createMenu();
 //     document.location.href = "/";
 // }
 
+// need to add an admin products page first, that when you click
+// a product you get sent to the edit form page
+
+// or if there is some way to display the products page differently
+// depending on if you are an admin logged in or not
+
+// create a new createProducts.js for products page - for all products
+
+// const userIsLoggedIn = getFromStorage("user");
+// let pathname = `<a href="product.html?id=${data[i].id}"`;
+
+// if (userIsLoggedIn) {
+//     pathname = `<a href="product.html?id=${data[i].id}"`;
+// }
+
 const form = document.querySelector("#edit-products-form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
