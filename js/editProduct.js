@@ -55,7 +55,7 @@ const loader = document.querySelector(".loader");
         console.log(product);
     }
     catch (error) {
-        displayMessage("error", json.message, ".message-container");
+        displayMessage("alert-error", json.message, ".message-container");
         console.log(error);
     }
     finally {

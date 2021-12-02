@@ -27,7 +27,7 @@ function submitForm(event) {
     const featuredValue = featured.checked;
 
     if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue < 20) {
-        displayMessage("warning", "Please supply all values", ".message-container");
+        displayMessage("alert-warning", "Please supply all values", ".message-container");
     }
     else {
         addProduct(titleValue, priceValue, descriptionValue, featuredValue);
@@ -61,16 +61,16 @@ async function addProduct(title, price, description, featured) {
         console.log(json);
 
         if (json.created_at) {
-            displayMessage("success", "Product added!", ".message-container");
+            displayMessage("alert-success", "Product added!", ".message-container");
             form.reset();
         }
 
         if (json.error) {
-            displayMessage("error", json.message, ".message-container");
+            displayMessage("alert-error", json.message, ".message-container");
         }
     }
     catch (error) {
-        displayMessage("error", "An error occurred", ".message-container");
+        displayMessage("alert-error", "An error occurred", ".message-container");
     }
 }
 

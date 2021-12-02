@@ -2,6 +2,7 @@ import { baseUrl } from "../constants/api.js";
 import { addToCart } from "../utils/cartFunctions.js";
 import { createMenu } from "./createMenu.js";
 import { countItemsInCart } from "../utils/cartFunctions.js";
+import { displayMessage } from "../components/displayMessage.js";
 
 const productContainer = document.querySelector(".product-container");
 const querystring = document.location.search;
@@ -52,7 +53,7 @@ async function createProduct() {
     }
 
     catch(error) {
-        console.log(error);
+        displayMessage("alert-danger", "An error occurred while trying to fetch products", productContainer)
     }
 }
 

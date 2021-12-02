@@ -19,7 +19,7 @@ function validateForm(event) {
     const passwordValue = password.value.trim();
 
     if (emailValue.length === 0 || passwordValue.length === 0) {
-        return displayMessage("error", "Email and / or password invalid or don't match", ".message-container");
+        return displayMessage("alert-danger", "Email and / or password invalid or don't match", ".message-container");
     }
 
     login(emailValue, passwordValue);
@@ -49,7 +49,7 @@ async function login(email, password) {
         }
 
         if (json.error) {
-            displayMessage("error", "Email and/or password is invalid and/or don't match", ".message-container");
+            displayMessage("alert-danger", "An error occurred", ".message-container");
         }
     }
     catch (error) {

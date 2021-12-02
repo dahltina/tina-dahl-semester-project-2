@@ -4,6 +4,7 @@ import { createArticles } from "./ui/createArticles.js";
 import { createMenu } from "./ui/createMenu.js";
 import { countItemsInCart } from "./utils/cartFunctions.js";
 import { filterProducts } from "./utils/filterProducts.js";
+import displayMessage from "./components/displayMessage.js";
 
 const productsUrl = baseUrl + "products";
 const container = ".featured-products-container";
@@ -23,7 +24,7 @@ async function getProducts() {
 
     }
     catch (error) {
-        console.log(error);
+        displayMessage("alert-danger", "An error occurred while trying to fetch the products", container)
     }
 }
 
@@ -40,7 +41,7 @@ async function getImages() {
         hero.innerHTML += `<img class="banner-img" src="${image.hero_banner.url}" alt="${image.hero_banner.alternativeText}">`;
     }
     catch (error) {
-        console.log(error);
+        displayMessage("alert-warning", "Missing image", hero)
     }
 }
 
@@ -58,7 +59,7 @@ async function getPosts() {
         createArticles(post, postContainer);
     }
     catch (error) {
-        console.log(error);
+        displayMessage("alert-danger", "An error occurred while trying to fetch the articles", postContainer)
     }
 }
 
