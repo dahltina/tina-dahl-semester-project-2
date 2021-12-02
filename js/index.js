@@ -3,12 +3,14 @@ import { createCards } from "./ui/createCards.js";
 import { createArticles } from "./ui/createArticles.js";
 import { createMenu } from "./ui/createMenu.js";
 import { countItemsInCart } from "./utils/cartFunctions.js";
+import { filterProducts } from "./utils/filterProducts.js";
 
 const productsUrl = baseUrl + "products";
 const container = ".featured-products-container";
 
 createMenu();
 countItemsInCart();
+
 
 async function getProducts() {
 
@@ -17,7 +19,7 @@ async function getProducts() {
         const json = await response.json();
         const products = json;
         createCards(products, container);
-        console.log(products);
+        filterProducts(products, container);
 
     }
     catch (error) {

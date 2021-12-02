@@ -58,7 +58,7 @@
 
     <main>
 
-      <div class="container-xl mt-5" id="edit-products-container">
+      <div class="container-xl mt-5" id="add-products-container">
         <form id="add-products-form">
             <h1>Add products</h1>
             <div class="mb-3 mt-5">
@@ -73,16 +73,15 @@
               <input type="file" class="form-control" id="image-upload">
               <label class="input-group-text" for="image-upload">Upload image</label>
             </div>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="featured">
-              <label class="form-check-label" for="featured">Featured</label>
-            </div>
             <div class="form-floating">
               <textarea class="form-control" placeholder="Leave a comment here" id="product-description" style="height: 200px"></textarea>
               <label for="product-description">Product description</label>
             </div>
-
-            <button type="submit" class="btn btn-outline-primary mt-4">Add / update product</button>
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="featured">
+              <label class="form-check-label" for="featured">Featured</label>
+            </div>
+            <button type="submit" class="btn btn-outline-primary mt-4">Add product</button>
             <div class="message-container"></div>
         </form>
     </div>
