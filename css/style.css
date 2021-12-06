@@ -307,9 +307,10 @@ footer .form-error {
   color: #FC6D69;
 }
 
-#add-products-container {
+#add-products-container,
+#edit-products-container {
   max-width: 1000px;
-  height: 80vh;
+  height: 90vh;
 }
 
 #edit-products-form {

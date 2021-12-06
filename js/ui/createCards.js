@@ -6,7 +6,7 @@ export function createCards(data, targetElement) {
     element.innerHTML = "";
 
     if (data.length === 0) {
-        displayMessage("alert-warning", "Sorry, we didn't find any matching products", targetElement);
+        displayMessage("alert-warning", "Sorry, we couldn't find any matching products", targetElement);
     }
 
     for (let i = 0; i < data.length; i++) {

@@ -41,3 +41,21 @@ export function getFromStorage(key) {
         return JSON.parse(value);
     }
 }
+
+
+
+// export function isUserLoggedIn () {
+
+//     const userIsLoggedIn = getUsername();
+//     console.log(userIsLoggedIn);
+
+//     if (userIsLoggedIn) {
+//         let logoutBtn = document.querySelector("#logout");
+//         logoutBtn.addEventListener("click", logout());
+//         console.log("logged out");
+//     }
+// }
+
+// function logout() {
+//     localStorage.removeItem("user");
+// }

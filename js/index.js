@@ -41,7 +41,7 @@ async function getImages() {
         hero.innerHTML += `<img class="banner-img" src="${image.hero_banner.url}" alt="${image.hero_banner.alternativeText}">`;
     }
     catch (error) {
-        displayMessage("alert-warning", "Missing image", hero)
+        displayMessage("alert-danger", "Missing image", hero)
     }
 }
 
@@ -57,6 +57,7 @@ async function getPosts() {
         const response = await fetch(postsUrl);
         const post = await response.json();
         createArticles(post, postContainer);
+        console.log(post);
     }
     catch (error) {
         displayMessage("alert-danger", "An error occurred while trying to fetch the articles", postContainer)

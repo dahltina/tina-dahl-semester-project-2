@@ -8,7 +8,7 @@ const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const url = baseUrl + "admin/login";
 
-createMenu();
+createMenu()
 
 form.addEventListener("submit", validateForm);
 
