@@ -2,13 +2,15 @@ import displayMessage from "../components/displayMessage.js";
 import { saveToken, saveUser } from "../utils/userFunctions.js";
 import { createMenu } from "../ui/createMenu.js";
 import { baseUrl } from "../constants/api.js";
+import { countItemsInCart } from "../utils/cartFunctions.js";
+
+createMenu();
+countItemsInCart();
 
 const form = document.querySelector("#login-form");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const url = baseUrl + "admin/login";
-
-createMenu()
 
 form.addEventListener("submit", validateForm);
 

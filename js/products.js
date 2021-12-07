@@ -3,8 +3,10 @@ import { getUsername } from "./utils/userFunctions.js";
 import { baseUrl } from "./constants/api.js";
 import { filterProducts } from "./utils/filterProducts.js";
 import { createMenu } from "./ui/createMenu.js";
+import { countItemsInCart } from "./utils/cartFunctions.js";
 
 createMenu();
+countItemsInCart();
 
 const productsUrl = baseUrl + "products";
 const container = ".products-container";

@@ -2,8 +2,10 @@ import { createMenu } from "./ui/createMenu.js";
 import displayMessage from "./components/displayMessage.js"
 import { getToken } from "./utils/userFunctions.js";
 import { baseUrl } from "./constants/api.js";
+import { countItemsInCart } from "./utils/cartFunctions.js";
 
 createMenu();
+countItemsInCart();
 
 const form = document.querySelector("#add-products-form");
 const title = document.querySelector("#title");

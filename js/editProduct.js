@@ -2,8 +2,10 @@ import { baseUrl } from "./constants/api.js";
 import { createMenu } from "./ui/createMenu.js";
 import { getToken } from "./utils/userFunctions.js";
 import displayMessage from "./components/displayMessage.js";
+import { countItemsInCart } from "./utils/cartFunctions.js";
 
 createMenu();
+countItemsInCart();
 
 const querystring = document.location.search;
 const params = new URLSearchParams(querystring);

@@ -4,6 +4,9 @@ import { createMenu } from "./createMenu.js";
 import { countItemsInCart } from "../utils/cartFunctions.js";
 import displayMessage from "../components/displayMessage.js";
 
+createMenu();
+countItemsInCart();
+
 const productContainer = document.querySelector(".product-container");
 const querystring = document.location.search;
 const params = new URLSearchParams(querystring);
@@ -17,9 +20,6 @@ const url = baseUrl + "products/" + id;
 // console.log(prevPage);
 
 // <img class="rating" alt="product-rating" scr="../../images/rating.svg">
-
-createMenu();
-countItemsInCart();
 
 async function createProduct() {
 
@@ -52,7 +52,7 @@ async function createProduct() {
 
     }
 
-    catch(error) {
+    catch (error) {
         displayMessage("alert-danger", "An error occurred while trying to fetch products", productContainer)
     }
 }
@@ -62,7 +62,7 @@ createProduct().then(() => {
     const addToCartBtn = document.querySelectorAll(".add-to-cart-btn");
 
     addToCartBtn.forEach((button) => {
-      button.addEventListener("click", addToCart)
+        button.addEventListener("click", addToCart)
     });
 })
 

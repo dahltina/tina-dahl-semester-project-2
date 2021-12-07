@@ -1,7 +1,9 @@
 import { createMenu } from "../ui/createMenu.js";
+import { countItemsInCart } from "../utils/cartFunctions.js";
 import { getUsername } from "../utils/userFunctions.js";
 
 createMenu();
+countItemsInCart();
 
 // display username
 const username = getUsername();
