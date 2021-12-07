@@ -1,11 +1,10 @@
-
 // grid
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 1000px,
   xl: 1300px,
-  xxl: 1450px
+  xxl: 1450px,
 ) !default;
 
 // typography
@@ -13,18 +12,19 @@ $font-family-base: "kepler-std-extended-display";
 $font-family-sans-serif: "urw-form";
 $font-size-base: 1rem;
 $h1-font-size: $font-size-base * 5;
+$h2-font-size: $font-size-base * 3.5;
 
 // colors
-$primary: #FC6D69;
-$secondary: #FE9665;
-$success: #38AB8D;
-$info: #72E3C6;
+$primary: #fc6d69;
+$secondary: #fe9665;
+$success: #38ab8d;
+$info: #72e3c6;
 $warning: $secondary;
 $danger: $primary;
 $color-text-dark: #000;
 $color-text: #767676;
 $color-white: #fff;
-$background-color: #FEFEF3;
+$background-color: #fefef3;
 
 $border-radius: 1rem;
 $link-hover-color: inherit;

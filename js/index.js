@@ -48,7 +48,7 @@ const imageUrl = baseUrl + "home";
 
 // get articles
 const postsUrl = baseUrl + "posts";
-const postContainer = ".post-container";
+const postContainer = ".article-container";
 
 (async function getPosts() {
     try {

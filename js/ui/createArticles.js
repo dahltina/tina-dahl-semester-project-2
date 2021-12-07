@@ -11,12 +11,12 @@ export function createArticles(data, targetElement) {
                                     <img src="${data[i].cover.url}" class="card-img-top" alt="${data[i].cover.alternativeText}">
                                     <div class="card-body">
                                         <h3 class="card-title">${data[i].title}</h3>
-                                        <p> ${truncatedContent}</p>
+                                        <p>${truncatedContent}</p>
                                     </div>
                                 </div>`
     }
 }
 
-function truncate(string, len){
-    return (string.length > len) ? string.substr(0, len-1) + '&hellip;' : string;
+function truncate(string, len) {
+    return (string.length > len) ? string.substr(0, len - 1) + '&hellip;' : string;
 };
