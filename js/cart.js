@@ -23,7 +23,7 @@ cartItems.forEach(product => {
                                         <img src="${product.image}" class="product-thumb">
                                     </div>
                                     <div class="col-5 d-flex align-items-center justify-content-start">
-                                        <h5><a href="" class="product-link">${product.name} LINK</a></h5>
+                                        <h5><a href="product.html?id=${product.id}" class="product-link">${product.name}</a></h5>
                                     </div>
                                     <div class="col-2 d-flex align-items-center justify-content-evenly product-count-container">
                                         <i class="fas fa-plus"></i>
@@ -46,11 +46,11 @@ function updateCartTotal() {
     // const pricePerProduct = productPrice * quantity;
     // console.log(quantity);
 
-    productPrice.forEach(function(item) {
+    productPrice.forEach(function (item) {
         total.push(parseFloat(item.textContent))
     })
 
-    const price = total.reduce(function(total, item){
+    const price = total.reduce(function (total, item) {
         total += item;
         return total;
     }, 0)
