@@ -78,7 +78,8 @@
     <main>
       <div class="container-xl mt-5" id="edit-products-container">
         <h1>Edit products</h1>
-        <div class="loader">Loader...</div>
+        <div class="message-container"></div>
+        <div class="loader">Loading...</div>
         <form id="edit-products-form">
           <div class="mb-3 mt-5">
             <label for="title" class="form-label">Product title</label>
@@ -112,11 +113,10 @@
             ></textarea>
             <label for="product-description">Product description</label>
           </div>
-          <input id="id" />
+          <input id="id" type="hidden"/>
           <button type="submit" class="btn btn-outline-primary mt-4">
-            Add / update product
+            Update product
           </button>
-          <div class="message-container"></div>
         </form>
       </div>
     </main>

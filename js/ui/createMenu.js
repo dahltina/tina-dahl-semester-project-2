@@ -15,7 +15,7 @@ export function createMenu() {
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item small" href="add-products.html">Add products</a></li>
-                        <li><a class="dropdown-item small" href="edit-products.html">Edit products</a></li>
+                        <li><a class="dropdown-item small" href="products.html">Edit products</a></li>
                         <li><a class="dropdown-item small" id="logout" href="#">Log out</a></li>
                     </ul>
                 </div>`;

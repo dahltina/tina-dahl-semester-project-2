@@ -26,7 +26,7 @@ function submitForm(event) {
     const descriptionValue = description.value.trim();
     const featuredValue = featured.checked;
 
-    if(titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue < 20) {
+    if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue < 20) {
         displayMessage("alert-warning", "Please supply all values", ".message-container");
     }
     else {
@@ -66,11 +66,11 @@ async function addProduct(title, price, description, featured) {
         }
 
         if (json.error) {
-            displayMessage("alert-error", json.message, ".message-container");
+            displayMessage("alert-danger", json.message, ".message-container");
         }
     }
     catch (error) {
-        displayMessage("alert-error", "An error occurred", ".message-container");
+        displayMessage("alert-danger", "An error occurred", ".message-container");
     }
 }
 

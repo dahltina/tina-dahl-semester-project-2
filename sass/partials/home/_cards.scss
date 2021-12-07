@@ -1,4 +1,5 @@
-.featured-products-container {
+.featured-products-container,
+.products-container {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 1fr 1fr;
@@ -24,7 +25,6 @@
 }
 
 .card {
-
     position: relative;
 
     .fa-heart {
@@ -43,26 +43,27 @@
     }
 }
 
-.product-price span{
+.product-price span {
     border: 2px solid $secondary;
     border-radius: 1rem;
-    padding: .4rem .5rem;
+    padding: 0.4rem 0.5rem;
     font-family: $font-family-base;
     font-size: 1.25rem;
     margin: 0 auto;
 }
 
 @media (min-width: 720px) {
-    .featured-products-container {
+    .featured-products-container,
+    .products-container {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 @media (min-width: 960px) {
-    .featured-products-container {
+    .featured-products-container,
+    .products-container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-column-gap: 2rem;
         grid-row-gap: 2rem;
     }
 }
-
