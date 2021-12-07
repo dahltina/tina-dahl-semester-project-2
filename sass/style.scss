@@ -3,15 +3,15 @@
 @import "partials/navbar";
 @import "partials/costum";
 @import "partials/footer";
+@import "partials/layout.scss";
 @import "partials/home/cards";
 @import "partials/home/hero";
 @import "partials/home/posts";
 @import "partials/product/product";
 @import "partials/cart/cart";
 @import "partials/admin/loginForm.scss";
-@import "partials/admin/addProducts.scss";
 @import "partials/admin/editProducts.scss";
-
+@import "partials/admin/admin.scss";
 
 // bootstrap
 @import "../bootstrap-sass/functions";

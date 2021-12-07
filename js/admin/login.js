@@ -45,7 +45,7 @@ async function login(email, password) {
         if (json.data.user) {
             saveToken(json.data.token);
             saveUser(json.data.user);
-            location.href = "add-products.html";
+            location.href = "admin.html";
         }
 
         if (json.error) {

@@ -126,6 +126,13 @@ footer .form-error {
   display: none;
 }
 
+#add-products-container,
+#edit-products-container,
+#admin-container {
+  max-width: 1000px;
+  height: 90vh;
+}
+
 .featured-products-container,
 .products-container {
   display: grid;
@@ -312,14 +319,14 @@ footer .form-error {
   color: #FC6D69;
 }
 
-#add-products-container,
-#edit-products-container {
-  max-width: 1000px;
-  height: 90vh;
-}
-
 #edit-products-form {
   display: none;
+}
+
+.admin-cta {
+  padding: 100px;
+  color: #000 !important;
+  border-radius: 20px;
 }
 
 :root {
