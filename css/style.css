@@ -258,9 +258,12 @@ footer .form-error {
   background-position: top right;
 }
 
+.product-container {
+  height: 100vh;
+}
 .product-container .product {
   max-width: 1200px;
-  margin-bottom: 180px;
+  margin: 0 0 0 180px;
 }
 .product-container .product-info {
   max-width: 500px;

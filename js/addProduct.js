@@ -10,11 +10,12 @@ countItemsInCart();
 const form = document.querySelector("#add-products-form");
 const title = document.querySelector("#title");
 const price = document.querySelector("#price");
-const image = document.querySelector("#image-upload");
 const featured = document.querySelector("#featured");
 const description = document.querySelector("#product-description");
 const message = document.querySelector(".message-container");
-
+const image = document.querySelector("#image-upload");
+const token = getToken();
+const url = baseUrl + "products";
 
 form.addEventListener("submit", submitForm);
 
@@ -36,23 +37,29 @@ function submitForm(event) {
     }
 }
 
-async function addProduct(title, price, description, featured) {
-    const url = baseUrl + "products";
 
-    const data = JSON.stringify({
+async function addProduct(title, price, description, featured) {
+    const formData = new FormData();
+
+    if (image.files.length === 0) {
+        displayMessage("alert-warning", "Select an image", ".message-container");
+    }
+    const file = image.files[0];
+
+    const data = {
         title: title,
         price: price,
         description: description,
         featured: featured
-    });
+    };
 
-    const token = getToken();
+    formData.append("files.image", file, file.name);
+    formData.append("data", JSON.stringify(data));
 
     const options = {
         method: "POST",
-        body: data,
+        body: formData,
         headers: {
-            "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`
         }
     };
@@ -75,4 +82,3 @@ async function addProduct(title, price, description, featured) {
         displayMessage("alert-danger", "An error occurred", ".message-container");
     }
 }
-

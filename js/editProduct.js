@@ -3,6 +3,7 @@ import { createMenu } from "./ui/createMenu.js";
 import { getToken } from "./utils/userFunctions.js";
 import displayMessage from "./components/displayMessage.js";
 import { countItemsInCart } from "./utils/cartFunctions.js";
+import { deleteProduct } from "./admin/deleteProduct.js";
 
 createMenu();
 countItemsInCart();
@@ -34,6 +35,7 @@ const loader = document.querySelector(".loader");
         featured.value = product.featured;
         description.value = product.description;
         // id.value = product.id;
+        deleteProduct(product.id);
 
         console.log(product);
     }
@@ -85,7 +87,7 @@ async function updateProduct(title, price, description, featured) {
         body: data,
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer `
+            "Authorization": `Bearer ${token}`
         }
     };
 
