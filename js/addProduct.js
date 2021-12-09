@@ -15,7 +15,7 @@ const description = document.querySelector("#product-description");
 const message = document.querySelector(".message-container");
 const image = document.querySelector("#image-upload");
 const token = getToken();
-const url = baseUrl + "products";
+const url = baseUrl + "products/";
 
 form.addEventListener("submit", submitForm);
 

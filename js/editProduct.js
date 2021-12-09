@@ -23,6 +23,7 @@ const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
 const loader = document.querySelector(".loader");
 
+// get the product
 (async function () {
 
     try {
@@ -31,8 +32,7 @@ const loader = document.querySelector(".loader");
 
         title.value = product.title;
         price.value = product.price;
-        // image.value = product.image;
-        featured.value = product.featured;
+        featured.checked = product.featured;
         description.value = product.description;
         // id.value = product.id;
         deleteProduct(product.id);
@@ -49,6 +49,7 @@ const loader = document.querySelector(".loader");
     }
 })();
 
+// validate form
 form.addEventListener("submit", submitForm)
 
 function submitForm(event) {
@@ -70,23 +71,31 @@ function submitForm(event) {
     updateProduct(titleValue, priceValue, descriptionValue, featuredValue);
 }
 
+// update product
 async function updateProduct(title, price, description, featured) {
-    const url = baseUrl + "products/" + id;
 
-    const data = JSON.stringify({
+    const token = getToken();
+    const formData = new FormData();
+
+    if (image.files.length === 0) {
+        displayMessage("alert-warning", "Select an image", ".message-container");
+    }
+    const file = image.files[0];
+
+    const data = {
         title: title,
         price: price,
         description: description,
         featured: featured
-    });
+    };
 
-    const token = getToken();
+    formData.append("files.image", file, file.name);
+    formData.append("data", JSON.stringify(data));
 
     const options = {
         method: "PUT",
-        body: data,
+        body: formData,
         headers: {
-            "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`
         }
     };
