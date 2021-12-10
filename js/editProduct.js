@@ -34,14 +34,12 @@ const loader = document.querySelector(".loader");
         price.value = product.price;
         featured.checked = product.featured;
         description.value = product.description;
-        // id.value = product.id;
         deleteProduct(product.id);
 
         console.log(product);
     }
     catch (error) {
-        displayMessage("alert-error", "error", ".message-container");
-        console.log(error);
+        displayMessage("alert-danger", "An error occurred while trying to fetch the product", ".message-container");
     }
     finally {
         loader.style.display = "none";
@@ -62,7 +60,6 @@ function submitForm(event) {
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
     const featuredValue = featured.checked;
-    const idValue = idInput.value;
 
     if (titleValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue < 20) {
         displayMessage("alert-warning", "Please supply all values", ".message-container");
@@ -106,7 +103,7 @@ async function updateProduct(title, price, description, featured) {
         console.log(json);
 
         if (json.updated_at) {
-            displayMessage("alert-success", "Product updated!", ".message-container");
+            displayMessage("alert-success", `Product updated! <a href="product.html?id=${id}">Check it out</a>`, ".message-container");
         }
 
         if (json.error) {
