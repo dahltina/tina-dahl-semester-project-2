@@ -26,8 +26,7 @@ export function addToCart() {
         alert("Added to cart");
     }
     else {
-        productExists.count++;
-        saveToCart(currentCart);
+        alert("You already have this item in your cart");
     }
 }
 

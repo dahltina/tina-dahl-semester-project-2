@@ -1,0 +1,20 @@
+.more-products-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s all ease-in-out;
+  }
+  a:hover {
+    transform: scale(1.01);
+  }
+}
+
+@media (min-width: 720px) {
+  .more-products-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

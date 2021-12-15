@@ -15,11 +15,6 @@ const breadcrumbActive = document.querySelector(".breadcrumb-active");
 const pageTitle = document.querySelector("title");
 const url = baseUrl + "products/" + id;
 
-// const breadcrumb1 = document.querySelector(".breadcrumb1");
-// const prevPage = document.referrer;
-// console.log(prevPage);
-
-// <img class="rating" alt="product-rating" scr="../../images/rating.svg">
 
 async function createProduct() {
 
@@ -68,3 +63,45 @@ createProduct().then(() => {
 
 
 // display "you may also like"
+async function getMoreProducts() {
+
+    const productsUrl = baseUrl + "products/";
+
+    try {
+        const response = await fetch(productsUrl);
+        const json = await response.json();
+        console.log(json);
+        displayProducts(json);
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+getMoreProducts();
+
+function displayProducts(data) {
+
+    const container = document.querySelector(".more-products-container");
+
+    container.innerHTML = "";
+
+    for (let i = 0; i < data.length; i++) {
+
+        if (i === 4) {
+            break;
+        }
+
+        container.innerHTML += `<a href="product.html?id=${data[i].id}"
+                                    <div class="card">
+                                        <img src="${data[i].image.url}" class="card-img-top" alt="${data[i].image.alternativeText}">
+                                        <i class="far fa-heart"></i>
+                                        <div class="card-body">
+                                            <h3 class="card-title">${data[i].title}</h3>
+                                            <p class="product-price mt-4"><span>$ ${data[i].price}</span></p>
+                                        </div>
+                                    </div>
+                                </a>`
+    }
+}
+
