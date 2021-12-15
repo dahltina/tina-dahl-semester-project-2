@@ -271,7 +271,7 @@ footer .form-error {
 }
 
 .product-container {
-  height: 100vh;
+  margin: 200px 0;
 }
 .product-container .product {
   max-width: 1200px;

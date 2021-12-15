@@ -1,14 +1,15 @@
+
+// add to cart
 export function addToCart() {
     const id = this.dataset.id;
     const name = this.dataset.name;
     const price = this.dataset.price;
     const image = this.dataset.image;
-    let count = 1;
 
     const currentCart = getExistingCart();
     console.log(currentCart);
 
-    const productExists = currentCart.find(function(item) {
+    const productExists = currentCart.find(function (item) {
         return item.id === id;
     });
 
@@ -18,18 +19,19 @@ export function addToCart() {
             name: name,
             price: price,
             image: image,
-            count: count
         };
 
         currentCart.push(product);
         saveToCart(currentCart);
+        alert("Added to cart");
     }
     else {
-        productExists.count ++;
+        productExists.count++;
         saveToCart(currentCart);
     }
 }
 
+// get excisting cart
 export function getExistingCart() {
 
     let cartItems = localStorage.getItem("cart");
@@ -44,11 +46,10 @@ export function getExistingCart() {
 
 const cartCount = document.querySelector("#cart-count");
 
-function saveToCart(cartItems) {
+export function saveToCart(cartItems) {
     localStorage.setItem("cart", JSON.stringify(cartItems));
     countItemsInCart();
     cartCount.style.display = "block";
-    alert("Added to cart");
 }
 
 // display number of items in cart button badge
@@ -61,60 +62,3 @@ export function countItemsInCart() {
         cartCount.style.display = "none";
     }
 }
-
-
-// remove items from cart
-
-
-// .then(() => {
-//     const removeBtn = document.querySelectorAll("i .fa-minus");
-//     const addBtn = document.querySelectorAll("i .fa-plus");
-
-//     removeBtn.forEach((button) => {
-//       button.addEventListener("click", deleteItem)
-//     });
-// })
-
-//     const newCart = currentCart.filter(item => item.id !== id);
-//     saveToCart(newCart);
-
-
-
-
-
-
-// export const addToCart = (id, userIsLoggedIn) => {
-//     let cart = [];
-//     let itemToAdd = {
-//         id,
-//         count: 1,
-//     };
-//     if (localStorage.getItem('cart')) {
-//         cart = JSON.parse(localStorage.getItem('cart'));
-//         let item = cart.find(el => el.id === id);
-//         if (!item) {
-//             cart.push(itemToAdd);
-//         } else {
-//             item.count ++;
-//         }
-//     } else {
-//         cart = [itemToAdd];
-//     }
-//     localStorage.setItem('cart', JSON.stringify(cart))
-//     console.log(localStorage.getItem('cart'))
-// };
-
-// if (localStorage.getItem("cart")) {
-//     cart = JSON.parse(currentCart);
-//     let item = cart.find(product => product.id === id);
-
-//     if (!item) {
-//         currentCart.push(product);
-//         saveToCart(currentCart);
-//     }
-//     else {
-//         item.count ++;
-//     }
-//     localStorage.setItem('cart', JSON.stringify(cart))
-//     console.log(localStorage.getItem('cart'))
-// }
