@@ -84,7 +84,7 @@ header {
 }
 
 body {
-  background-color: #FEFEF3 !important;
+  background-color: #fefef3 !important;
 }
 
 img {
@@ -101,7 +101,8 @@ img {
   padding: 0.5rem;
 }
 
-.btn-outline-primary button {
+a.btn.btn-outline-primary,
+button.btn-outline-primary {
   color: #000 !important;
 }
 
@@ -338,7 +339,7 @@ footer .form-error {
 }
 
 #login-form-container {
-  height: 70vh;
+  height: 80vh;
 }
 #login-form-container #login-form {
   max-width: 700px;
