@@ -34,28 +34,10 @@ function saveToStorage(key, value) {
 export function getFromStorage(key) {
     const value = localStorage.getItem(key);
 
-    if(!value) {
+    if (!value) {
         return [];
     }
     else {
         return JSON.parse(value);
     }
 }
-
-
-
-// export function isUserLoggedIn () {
-
-//     const userIsLoggedIn = getUsername();
-//     console.log(userIsLoggedIn);
-
-//     if (userIsLoggedIn) {
-//         let logoutBtn = document.querySelector("#logout");
-//         logoutBtn.addEventListener("click", logout());
-//         console.log("logged out");
-//     }
-// }
-
-// function logout() {
-//     localStorage.removeItem("user");
-// }

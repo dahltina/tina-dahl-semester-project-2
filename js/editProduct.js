@@ -19,7 +19,6 @@ const price = document.querySelector("#price");
 const image = document.querySelector("#image-upload");
 const featured = document.querySelector("#featured");
 const description = document.querySelector("#product-description");
-const idInput = document.querySelector("#id");
 const message = document.querySelector(".message-container");
 const loader = document.querySelector(".loader");
 
@@ -34,9 +33,10 @@ const loader = document.querySelector(".loader");
         price.value = product.price;
         featured.checked = product.featured;
         description.value = product.description;
+        image.files.value = product.image.name;
+
         deleteProduct(product.id);
 
-        console.log(product);
     }
     catch (error) {
         displayMessage("alert-danger", "An error occurred while trying to fetch the product", ".message-container");
