@@ -95,7 +95,6 @@ function displayProducts(data) {
         container.innerHTML += `<a href="product.html?id=${data[i].id}"
                                     <div class="card">
                                         <img src="${data[i].image.url}" class="card-img-top" alt="${data[i].image.alternativeText}">
-                                        <i class="far fa-heart"></i>
                                         <div class="card-body">
                                             <h3 class="card-title">${data[i].title}</h3>
                                             <p class="product-price mt-4"><span>$ ${data[i].price}</span></p>
