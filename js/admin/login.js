@@ -42,7 +42,6 @@ async function login(email, password) {
     try {
         const response = await fetch(url, options);
         const json = await response.json();
-        console.log(json);
 
         if (json.data.user) {
             saveToken(json.data.token);
@@ -51,11 +50,11 @@ async function login(email, password) {
         }
 
         if (json.error) {
-            displayMessage("alert-danger", "An error occurred", ".message-container");
+            displayMessage("alert-danger", "Email and / or password invalid or don't match", ".message-container");
         }
     }
     catch (error) {
-        console.log(error);
+        displayMessage("alert-danger", "Email and / or password invalid or don't match", ".message-container");
     }
 
 }

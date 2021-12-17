@@ -1,4 +1,4 @@
-// import displayMessage from "./components/displayMessage";
+import displayMessage from "./components/displayMessage.js";
 import { getUsername } from "./utils/userFunctions.js";
 import { baseUrl } from "./constants/api.js";
 import { filterProducts } from "./utils/filterProducts.js";
@@ -21,8 +21,7 @@ const container = ".products-container";
         filterProducts(products, container);
     }
     catch (error) {
-        // displayMessage("alert-danger", "An error occurred while trying to fetch the products", container);
-        console.log(error);
+        displayMessage("alert-danger", "An error occurred while trying to fetch the products", container);
     }
 })();
 

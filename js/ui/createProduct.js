@@ -70,11 +70,10 @@ async function getMoreProducts() {
     try {
         const response = await fetch(productsUrl);
         const json = await response.json();
-        console.log(json);
         displayProducts(json);
     }
     catch (error) {
-        console.log(error);
+        displayMessage("alert-danger", "An error occurred while trying to fetch products", productContainer)
     }
 }
 

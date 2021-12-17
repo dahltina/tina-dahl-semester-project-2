@@ -7,7 +7,6 @@ export function addToCart() {
     const image = this.dataset.image;
 
     const currentCart = getExistingCart();
-    console.log(currentCart);
 
     const productExists = currentCart.find(function (item) {
         return item.id === id;

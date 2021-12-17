@@ -100,7 +100,6 @@ async function updateProduct(title, price, description, featured) {
     try {
         const response = await fetch(url, options);
         const json = await response.json();
-        console.log(json);
 
         if (json.updated_at) {
             displayMessage("alert-success", `Product updated! <a href="product.html?id=${id}">Check it out</a>`, ".message-container");
@@ -112,6 +111,6 @@ async function updateProduct(title, price, description, featured) {
     }
 
     catch (error) {
-        console.log(error);
+        displayMessage("alert-danger", json.message, ".message-container");
     }
 }

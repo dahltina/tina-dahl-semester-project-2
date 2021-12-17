@@ -25,7 +25,6 @@ countItemsInCart();
     }
     catch (error) {
         displayMessage("alert-danger", "An error occurred while trying to fetch the products", container);
-        console.log(error);
     }
 })();
 
@@ -55,7 +54,6 @@ const postContainer = ".article-container";
         const response = await fetch(postsUrl);
         const post = await response.json();
         createArticles(post, postContainer);
-        console.log(post);
     }
     catch (error) {
         displayMessage("alert-danger", "An error occurred while trying to fetch the articles", postContainer)
