@@ -4,12 +4,12 @@ const input = document.querySelector("input#search");
 
 export function filterProducts(data, targetElement) {
 
-    function filteredProducts() {
+    function filteredProducts(event) {
 
         const inputValue = event.target.value.trim().toLowerCase();
 
-        const filteredData = data.filter(function(data) {
-            if (data.title.toLowerCase().includes(inputValue)) {
+        const filteredData = data.filter(function (data) {
+            if (data.title.toLowerCase().includes(inputValue) || data.description.toLowerCase().includes(inputValue)) {
                 return true;
             }
         });
@@ -23,4 +23,4 @@ export function filterProducts(data, targetElement) {
 
 function clearInput() {
     window.onload = input.value = "";
-  }
+}
