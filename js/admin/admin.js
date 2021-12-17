@@ -7,8 +7,8 @@ countItemsInCart();
 
 // display username
 const username = getUsername();
-const displayTitle = document.querySelector(".username");
-displayTitle.innerHTML = username;
+const displayUsername = document.querySelector(".username");
+displayUsername.innerHTML = username;
 
 // logout
 const logoutBtn = document.querySelector("#logout");
